@@ -1,0 +1,359 @@
+/* ========================
+   BASE RESET
+======================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: linear-gradient(180deg, #f6fff9, #edf9f2);
+  color: var(--text-dark);
+  line-height: 1.55;
+}
+
+/* ========================
+   WRAPPER
+======================== */
+.admin-wrap {
+  width: 100%;
+  max-width: 100%;
+  padding: 18px 16px 28px;
+}
+
+/* ========================
+   HEADERS
+======================== */
+.admin-wrap h2 {
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.admin-wrap h3 {
+  margin: 28px 0 12px;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+/* ========================
+   SUCCESS MESSAGE
+======================== */
+.success {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  font-weight: 800;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+
+.success.fade {
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: 0.4s ease;
+}
+
+/* ========================
+   ADD PRODUCT BUTTON
+======================== */
+#toggleForm {
+  width: 100%;
+  padding: 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  border: none;
+  font-weight: 900;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#toggleForm:active {
+  transform: scale(0.97);
+}
+
+/* ========================
+   PRODUCT FORM CARD
+======================== */
+.product-form {
+  display: none;
+  margin-top: 18px;
+  background: var(--card-bg);
+  padding: 18px;
+  border-radius: var(--radius);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow);
+}
+
+.product-form.show {
+  display: block;
+  animation: slideFade 0.35s ease;
+}
+
+/* ========================
+   FORM ELEMENTS
+======================== */
+.product-form label {
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.product-form input,
+.product-form select {
+  width: 100%;
+  padding: 14px 14px;
+  font-size: 0.95rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--glass-border);
+  background: #fff;
+  font-family: var(--font-main);
+}
+
+.product-form input:focus,
+.product-form select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0, 200, 83, 0.15);
+}
+
+/* FILE INPUTS */
+.product-form input[type="file"] {
+  padding: 10px;
+  font-size: 0.85rem;
+}
+
+/* ========================
+   SPECS
+======================== */
+#specs input {
+  margin-bottom: 10px;
+}
+
+/* ADD SPEC */
+.product-form button[type="button"] {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+/* SUBMIT */
+.product-form button[type="submit"] {
+  margin-top: 18px;
+  width: 100%;
+  padding: 16px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  font-weight: 900;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-strong);
+}
+
+/* ========================
+   DIVIDER
+======================== */
+hr {
+  margin: 32px 0;
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--glass-border),
+    transparent
+  );
+}
+
+/* ========================
+   PRODUCT LIST
+======================== */
+.product-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  align-items: center;
+  background: #fff;
+  padding: 14px 14px;
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  box-shadow: var(--shadow);
+}
+
+.product-row b {
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.product-row span {
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: var(--accent);
+}
+
+.product-row a {
+  color: var(--danger);
+  font-size: 1.2rem;
+}
+
+/* RESET DASHBOARD DAMAGE */
+.admin-wrap,
+.product-form,
+.product-row {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* MOBILE FIRST */
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #f6fff9;
+}
+
+.admin-wrap {
+  padding: 16px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+#toggleForm {
+  width: 100%;
+  padding: 14px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #00c853, #1de980);
+  color: #fff;
+  font-weight: 900;
+}
+
+.product-form {
+  display: none;
+  margin-top: 16px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 14px;
+}
+
+.product-form.show {
+  display: block;
+}
+
+label {
+  margin-top: 14px;
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+}
+
+.product-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  margin-bottom: 10px;
+  background: #fff;
+  padding: 14px;
+  border-radius: 14px;
+}
+
+/* TABLET */
+@media (min-width: 640px) {
+  .admin-wrap {
+    max-width: 760px;
+    margin: auto;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .admin-wrap {
+    max-width: 980px;
+  }
+}
+
+/* ========================
+   TABLET (≥ 640px)
+======================== */
+@media (min-width: 640px) {
+  .admin-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 28px;
+  }
+
+  #toggleForm {
+    width: auto;
+    padding: 12px 20px;
+  }
+
+  .product-form {
+    padding: 26px;
+  }
+
+  .product-row {
+    grid-template-columns: 1fr auto auto auto;
+  }
+}
+
+/* ========================
+   DESKTOP (≥ 1024px)
+======================== */
+@media (min-width: 1024px) {
+  .admin-wrap {
+    max-width: 980px;
+  }
+
+  .admin-wrap h2 {
+    font-size: 1.8rem;
+  }
+
+  .product-form {
+    padding: 30px;
+  }
+}
+
+/* ========================
+   ANIMATION
+======================== */
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Year Countdown</title>
+
+    <style>
+      /* ===== RESET ===== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        background: radial-gradient(circle at top, #0f2027, #000);
+        color: #fff;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* ===== CENTER MODAL ===== */
+      .counter-modal {
+        position: relative;
+        z-index: 2;
+        width: min(92%, 420px);
+        padding: 26px 22px 30px;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(8px);
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        text-align: center;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+      }
+
+      .counter-modal h1 {
+        font-size: clamp(1.5rem, 4vw, 1.9rem);
+        margin-bottom: 20px;
+        font-weight: 800;
+        letter-spacing: 0.6px;
+      }
+
+      /* ===== COUNTDOWN ===== */
+      .countdown {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+      }
+
+      .time-box {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 14px;
+        padding: 14px 6px;
+      }
+
+      .time-box .value {
+        font-size: clamp(1.8rem, 5vw, 2.6rem);
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .time-box .label {
+        margin-top: 8px;
+        font-size: 0.75rem;
+        opacity: 0.8;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* ===== CONFETTI ===== */
+      .confetti {
+        position: fixed;
+        top: -10px;
+        width: 8px;
+        height: 14px;
+        opacity: 0.9;
+        animation: confettiFall linear forwards;
+      }
+
+      @keyframes confettiFall {
+        to {
+          transform: translateY(110vh) rotate(720deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="counter-modal">
+      <h1>🎉 New Year Countdown 🎉</h1>
+
+      <div class="countdown">
+        <div class="time-box">
+          <div class="value" id="days">00</div>
+          <div class="label">Days</div>
+        </div>
+        <div class="time-box">
+          <div class="value" id="hours">00</div>
+          <div class="label">Hours</div>
+        </div>
+        <div class="time-box">
+          <div class="value" id="minutes">00</div>
+          <div class="label">Minutes</div>
+        </div>
+        <div class="time-box">
+          <div class="value" id="seconds">00</div>
+          <div class="label">Seconds</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      /* ===== YEAR-END LOGIC ===== */
+      function getYearEnd() {
+        const now = new Date();
+        const year = now.getFullYear();
+        let end = new Date(year, 11, 31, 23, 59, 59);
+
+        if (now > end) {
+          end = new Date(year + 1, 11, 31, 23, 59, 59);
+        }
+
+        return end.getTime();
+      }
+
+      let targetTime = getYearEnd();
+      let celebrationTriggered = false;
+
+      function updateCountdown() {
+        const now = Date.now();
+        let diff = targetTime - now;
+
+        if (diff <= 0) {
+          if (!celebrationTriggered) {
+            triggerCelebration();
+            celebrationTriggered = true;
+          }
+
+          targetTime = getYearEnd();
+          diff = targetTime - now;
+        }
+
+        if (diff > 0) celebrationTriggered = false;
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById("days").textContent = days
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("hours").textContent = hours
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("minutes").textContent = minutes
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("seconds").textContent = seconds
+          .toString()
+          .padStart(2, "0");
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      /* ===== CONFETTI EFFECT ===== */
+      function triggerCelebration() {
+        const colors = ["#ff3b3b", "#ffd93d", "#3cff00", "#3dcaff", "#c77dff"];
+        const confettiCount = 140;
+
+        for (let i = 0; i < confettiCount; i++) {
+          const piece = document.createElement("div");
+          piece.className = "confetti";
+
+          piece.style.left = Math.random() * 100 + "vw";
+          piece.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+
+          piece.style.animationDuration = Math.random() * 2.5 + 2 + "s";
+          piece.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+          document.body.appendChild(piece);
+
+          setTimeout(() => piece.remove(), 5000);
+        }
+      }
+    </script>
+  </body>
+</html>

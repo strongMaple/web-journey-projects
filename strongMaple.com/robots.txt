@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://maple.vercel.app/sitemap.xml
+Host: https://maple.vercel.app

@@ -1,0 +1,1 @@
+<a href= "https://curated-card-generator.netlify.app/">view</a>

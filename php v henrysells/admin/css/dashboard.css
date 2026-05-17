@@ -1,0 +1,383 @@
+:root {
+  --font-main: "Montserrat", sans-serif;
+
+  /* core greens */
+  --green-dark: #0a2612;
+  --accent: #00c853; /* primary accent (used for buttons) */
+  --accent-2: #1de980; /* secondary bright */
+  --muted: #5d7f66;
+  --card-bg: rgba(223, 245, 227, 0.92);
+  --glass-bg: rgba(0, 80, 40, 0.06);
+  --glass-border: rgba(0, 80, 40, 0.08);
+
+  /* UI */
+  --text-primary: #072912;
+  --text-soft: #0b2f18;
+  --radius: 12px;
+  --shadow: 0 12px 36px rgba(2, 33, 12, 0.08);
+  --shadow-strong: 0 18px 48px rgba(2, 33, 12, 0.12);
+
+  /* nav dropdown panel */
+  --dropdown-bg: rgba(255, 255, 255, 0.98);
+  --dropdown-border: rgba(2, 33, 12, 0.06);
+  --dropdown-width: 220px;
+}
+
+/* ========================
+   RESET
+   ======================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background: linear-gradient(180deg, #eaf8ed, #f7fff8);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================
+   HEADER (top)
+   ======================== */
+.admin-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 18px;
+
+  /* solid frosted base */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.92),
+    rgba(255, 255, 255, 0.96)
+  );
+
+  /* glass feel without transparency bleed */
+  backdrop-filter: blur(10px) saturate(1.2);
+  -webkit-backdrop-filter: blur(10px) saturate(1.2);
+
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: 0 6px 24px rgba(2, 33, 12, 1);
+
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+
+  /* prevent bleed-through on scroll */
+  isolation: isolate;
+  opacity: 1;
+}
+
+/* left: title & subtitle */
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.header-left h1 {
+  font-size: 1.02rem;
+  color: var(--accent);
+  font-weight: 700;
+  line-height: 1;
+}
+.header-left .subtitle {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* nav toggle (mobile) */
+.nav-toggle {
+  display: none; /* shown at breakpoints */
+  border: none;
+  background: transparent;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--text-soft);
+  padding: 6px;
+  border-radius: 8px;
+}
+
+/* header nav wrapper (desktop & dropdown anchor) */
+.header-nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  position: relative; /* for dropdown positioning */
+}
+
+/* nav links - desktop */
+.header-nav .nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: var(--text-soft);
+  border-radius: 10px;
+  background: transparent;
+  font-weight: 600;
+  transition: transform 0.12s ease, background 0.12s ease;
+}
+.header-nav .nav-link:hover {
+  transform: translateY(-2px);
+  background: rgba(0, 0, 0, 0.02);
+}
+.header-nav .nav-link.active {
+  background: rgba(0, 200, 83, 0.1);
+  border: 1px solid rgba(0, 80, 40, 0.04);
+  color: var(--accent);
+}
+
+/* logout button */
+.logout-btn {
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  border: none;
+  color: #042a12;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 180, 90, 0.14);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-strong);
+}
+
+/* ========================
+   NAV DROPDOWN PANEL (floating) - hidden by default
+   ======================== */
+/* The panel is injected visually by toggling .open on .header-nav */
+.header-nav .dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 52px;
+  width: var(--dropdown-width);
+  background: var(--dropdown-bg);
+  border-radius: 12px;
+  border: 1px solid var(--dropdown-border);
+  box-shadow: 0 18px 40px rgba(2, 33, 12, 0.16);
+  transform-origin: top right;
+  overflow: hidden;
+  z-index: 1250;
+  padding: 8px;
+}
+
+/* Panel items */
+.header-nav .dropdown a,
+.header-nav .dropdown button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text-primary);
+  background: transparent;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+.header-nav .dropdown a:last-child,
+.header-nav .dropdown button:last-child {
+  margin-bottom: 0;
+}
+
+.header-nav .dropdown a:hover,
+.header-nav .dropdown button:hover {
+  background: rgba(0, 200, 83, 0.06);
+  color: var(--accent);
+}
+
+/* show dropdown when .open added */
+.header-nav.open .dropdown {
+  display: block;
+  animation: navScalePop 0.18s cubic-bezier(0.2, 0.9, 0.2, 1) forwards;
+}
+
+/* small decorative top notch */
+.header-nav .dropdown::before {
+  content: "";
+  position: absolute;
+  right: 18px;
+  top: -8px;
+  width: 14px;
+  height: 14px;
+  background: var(--dropdown-bg);
+  transform: rotate(45deg);
+  border-left: 1px solid var(--dropdown-border);
+  border-top: 1px solid var(--dropdown-border);
+  box-shadow: -2px -2px 6px rgba(2, 33, 12, 0.03);
+}
+
+/* scale pop keyframes (option 2) */
+@keyframes navScalePop {
+  0% {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ========================
+   MAIN / GRID
+   ======================== */
+.dashboard-container {
+  max-width: 1400px;
+  margin: 18px auto;
+  padding: 18px;
+}
+
+/* section title */
+.section-title {
+  font-size: 1.35rem;
+  margin-bottom: 14px;
+  color: var(--green-dark);
+  font-weight: 700;
+}
+
+/* reviews grid */
+.reviews-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* review card */
+.review-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--glass-border);
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.22s ease, box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+.review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(2, 33, 12, 0.12);
+  border-color: var(--accent);
+}
+
+/* notebook texture */
+.review-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 1px
+  );
+  background-size: 100% 24px;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+.review-date {
+  font-size: 0.82rem;
+  color: var(--accent-2);
+  margin-bottom: 8px;
+}
+.review-text {
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+
+/* delete btn */
+.delete-btn {
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 12px;
+  width: 100%;
+  transition: background 0.18s ease, transform 0.12s ease;
+  font-weight: 700;
+}
+.delete-btn:hover {
+  background: #e63939;
+  transform: translateY(-2px);
+}
+
+/* ========================
+   SMALL SCREEN / RESPONSIVE
+   ======================== */
+/* mobile-first styles already used; now breakpoints */
+@media (min-width: 701px) {
+  /* show nav links inline on desktop */
+  .nav-toggle {
+    display: none !important;
+  }
+  .header-nav {
+    display: flex !important;
+    align-items: center;
+  }
+  .header-nav .dropdown {
+    display: none !important;
+  } /* not needed on desktop */
+}
+@media (max-width: 700px) {
+  /* show nav toggle, hide inline links: we expect existing HTML to include nav links; hide them visually */
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+  }
+  /* hide inline links if any (keeps markup safe) */
+  .header-nav > .nav-link {
+    display: none;
+  }
+  .header-nav {
+    gap: 6px;
+    align-items: center;
+  }
+  .logout-btn {
+    order: 2;
+  } /* show logout at right */
+}
+
+/* very small screens tweaks */
+@media (max-width: 420px) {
+  .header-left h1 {
+    font-size: 0.98rem;
+  }
+  .header-left .subtitle {
+    font-size: 0.78rem;
+  }
+  .header-nav .dropdown {
+    right: 8px;
+    top: 56px;
+    width: 200px;
+  }
+  .delete-btn {
+    padding: 12px;
+    font-size: 1rem;
+  }
+  .reviews-grid {
+    gap: 14px;
+  }
+}

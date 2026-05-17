@@ -1,0 +1,635 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #333;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+ul li {
+  font-size: 11px;
+  list-style-type: none;
+}
+
+a {
+  font-size: 11px;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.doc {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: 30% 70%;
+  max-width: 210mm;
+  width: 100%;
+  margin: 40px auto;
+  z-index: 1;
+}
+
+.doc .left-info {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  width: 100%;
+  padding: 10.51rem 10mm;
+  padding-right: 5mm;
+  padding-bottom: 2em;
+  background-color: #002f5b;
+}
+
+.left-info .contact,
+.left-info .education,
+.left-info .skills,
+.left-info .languages {
+  padding-bottom: 1rem;
+}
+
+.contact h4,
+.education h4,
+.skills h4,
+.languages h4 {
+  font-weight: 600;
+  letter-spacing: 3px;
+  padding-bottom: 5px;
+  border-width: 100%;
+  border-bottom: 1.5px solid #adadad;
+}
+
+.contact li:first-child {
+  padding-top: 2rem;
+}
+
+.contact li {
+  display: flex;
+  gap: 3mm;
+  padding-bottom: 11px;
+  transition: color 0.3s ease;
+}
+
+.contact li:first-child a:hover,
+.contact li:last-child a:hover {
+  color: #adadad;
+}
+
+.education .yr,
+.education .uni {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 1.3em 0;
+  padding-bottom: 2px;
+}
+
+.education .uni {
+  padding-top: 0;
+  padding-bottom: 11px;
+  max-width: 25ch;
+}
+
+.education ul {
+  padding-left: 0.61em;
+  text-align: left;
+}
+
+.education ul li {
+  list-style-type: unset;
+}
+
+.education ul:last-child li {
+  max-width: 24ch;
+  line-height: 17px;
+}
+
+.skills ul,
+.languages ul {
+  font-size: 11px;
+  padding: 0.81em 1.1em;
+}
+
+.skills li,
+.languages li {
+  list-style-type: unset;
+  line-height: 20px;
+}
+
+.left-info header,
+.right-info header {
+  padding: 3em;
+  text-align: left;
+}
+
+.left-info header h1,
+.right-info header h1 {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 31px;
+}
+
+.left-info header h1 span,
+.right-info header h1 span {
+  color: hsl(0, 0%, 40%);
+  font-weight: 800;
+}
+
+.left-info header p,
+.right-info header p {
+  position: relative;
+  font-size: 14.4px;
+}
+
+.left-info header p::after,
+.right-info header p::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  width: 3.2em;
+  height: 3px;
+  background: #002f5b;
+}
+
+.left-info header p::after {
+  background: #fff;
+}
+
+.left-info header {
+  display: none;
+  opacity: 0;
+}
+
+.right-info .profile {
+  padding: 2em;
+  padding-bottom: 0;
+}
+
+.profile h1,
+.work h1 {
+  color: #002f5b;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-width: 100%;
+  border-bottom: 1.5px solid #002f5b;
+}
+
+.profile p {
+  font-size: 11px;
+  color: hsl(0, 0%, 40%);
+  font-weight: 400;
+  text-align: justify;
+  padding: 1em 0;
+}
+
+.work {
+  position: relative;
+  padding: 0 2em;
+  padding-bottom: 5.32em;
+}
+
+.work::after {
+  content: '';
+  display: inline;
+  position: absolute;
+  height: 1px;
+  width: 88.1%;
+  background: hsl(209, 100%, 15%);
+  bottom: 0;
+}
+
+.work ul {
+  padding: 0 0.7em;
+  font-size: 16px;
+}
+
+.work ul .work1,
+.work ul .work2,
+.work ul .work3 {
+  position: relative;
+  list-style-type: unset;
+}
+
+.work1::after,
+.work2::after,
+.work3::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: #002f5b;
+  height: 9em;
+  width: 2px;
+  left: -12px;
+  top: 10px;
+}
+
+.work3::after {
+  height: 5.4em;
+}
+
+.work1 {
+  margin-top: 5px;
+}
+
+.work1,
+.work2,
+.work3 {
+  padding-top: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+}
+
+.work1 .title,
+.work2 .title,
+.work3 .title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 600;
+  color: hsl(0, 0%, 30%);
+}
+
+.title span {
+  font-size: 14px;
+  font-weight: 400;
+  color: hsl(0, 0%, 50%);
+}
+
+.work1 p,
+.work2 p,
+.work3 p {
+  font-weight: 400;
+  color: hsl(0, 0%, 45%);
+}
+
+.work1 ol,
+.work2 ol,
+.work3 ol {
+  padding: 0.51em 1.4em;
+}
+
+.work1 ol li,
+.work2 ol li,
+.work3 ol li {
+  list-style-type: disc;
+  width: 100%;
+  max-width: 90mm;
+  font-weight: 400;
+  color: hsl(0, 0%, 30%);
+}
+
+@media only screen and (max-width: 320px) {
+  .doc {
+    display: block;
+    width: 100%;
+    max-width: 70mm;
+    margin: 0 auto;
+  }
+
+  .left-info {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .left-info header {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    display: block;
+    opacity: 1;
+  }
+
+  .right-info header {
+    display: none;
+    opacity: 0;
+  }
+
+  .work ul {
+    padding-left: 0;
+  }
+
+  .work ul .work1,
+  .work ul .work2,
+  .work ul .work3 {
+    list-style: none;
+  }
+
+  .work1::after,
+  .work2::after,
+  .work3::after {
+    display: none;
+  }
+
+  .work1 .title,
+  .work2 .title,
+  .work3 .title {
+    display: flex;
+    flex-flow: wrap;
+    max-width: 20ch;
+  }
+
+  .work1 ol li,
+  .work2 ol li,
+  .work3 ol li {
+    text-align: left;
+    padding-bottom: 5px;
+    width: 100%;
+  }
+
+  .work {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .work::after {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .doc {
+    display: block;
+    width: 100%;
+    max-width: 120mm;
+    margin: 0 auto;
+  }
+
+  .left-info {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .left-info header {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    display: block;
+    opacity: 1;
+  }
+
+  .education .uni,
+  .education ul li {
+    max-width: 100ch;
+    width: 100%;
+  }
+
+  .education ul li:last-child {
+    max-width: 40ch;
+    width: 100%;
+  }
+
+  .right-info header {
+    display: none;
+    opacity: 0;
+  }
+
+  .work ul {
+    padding-left: 0;
+  }
+
+  .work ul .work1,
+  .work ul .work2,
+  .work ul .work3 {
+    list-style: none;
+  }
+
+  .work1::after,
+  .work2::after,
+  .work3::after {
+    display: none;
+  }
+
+  .work1 ol li,
+  .work2 ol li,
+  .work3 ol li {
+    text-align: left;
+    padding-bottom: 5px;
+    width: 100%;
+  }
+
+  .work {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .work::after {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+  .doc {
+    display: block;
+    max-width: 140mm;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .left-info {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .left-info header {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    display: block;
+    opacity: 1;
+  }
+
+  .education .uni,
+  .education ul li {
+    max-width: 100ch;
+    width: 100%;
+  }
+
+  .education ul li:last-child {
+    max-width: 40ch;
+    width: 100%;
+  }
+
+  .right-info header {
+    display: none;
+    opacity: 0;
+  }
+
+  .work ul {
+    padding-left: 0;
+  }
+
+  .work ul .work1,
+  .work ul .work2,
+  .work ul .work3 {
+    list-style: none;
+  }
+
+  .work1::after,
+  .work2::after,
+  .work3::after {
+    display: none;
+  }
+
+  .work1 .title,
+  .work2 .title,
+  .work3 .title {
+    display: flex;
+    flex-flow: wrap;
+    max-width: 20ch;
+  }
+
+  .work1 ol li,
+  .work2 ol li,
+  .work3 ol li {
+    text-align: left;
+    padding-bottom: 5px;
+    width: 100%;
+  }
+
+  .work {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .work::after {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 480px) {
+  .doc {
+    display: block;
+    max-width: 140mm;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .left-info {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .left-info header {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    display: block;
+    opacity: 1;
+  }
+
+  .education .uni,
+  .education ul li {
+    max-width: 100ch;
+    width: 100%;
+  }
+
+  .education ul li:last-child {
+    max-width: 40ch;
+    width: 100%;
+  }
+
+  .right-info header {
+    display: none;
+    opacity: 0;
+  }
+
+  .work ul {
+    padding-left: 0;
+  }
+
+  .work ul .work1,
+  .work ul .work2,
+  .work ul .work3 {
+    list-style: none;
+  }
+
+  .work1::after,
+  .work2::after,
+  .work3::after {
+    display: none;
+  }
+
+  .work1 ol li,
+  .work2 ol li,
+  .work3 ol li {
+    text-align: left;
+    padding-bottom: 5px;
+    width: 100%;
+  }
+
+  .work {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .work::after {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .doc {
+    width: 100%;
+    max-width: 180mm;
+    margin: 0 auto;
+  }
+
+  .doc .left-info {
+    padding-left: 0;
+    padding-left: 1em;
+  }
+
+  .work1::after,
+  .work2::after,
+  .work3::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #002f5b;
+    height: 9.9em;
+    width: 2.2px;
+    left: -12.4px;
+    top: 10px;
+  }
+
+  .work3::after {
+    height: 7.4em;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+  .doc {
+    width: 100%;
+    max-width: 180mm;
+    margin: 50px auto;
+    margin-bottom: 0;
+  }
+
+  .doc .left-info {
+    padding-left: 0;
+    padding-left: 1em;
+  }
+
+  .work1::after,
+  .work2::after,
+  .work3::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #002f5b;
+    height: 8.3em;
+    width: 2px;
+    left: -12.4px;
+    top: 10px;
+  }
+
+  .work {
+    padding-bottom: 5em;
+  }
+}
