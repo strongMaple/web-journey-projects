@@ -39,5 +39,7 @@ Mitwirken
 
 ---
 
+## [![Small Screen View](https://github.com/strongMaple/web-journey-projects/blob/main/henify-Observer-API/IMAGE/conter_observer.jpg?raw=true)](https://github.com/strongMaple/web-journey-projects)
+
 Autor
 [Maple]

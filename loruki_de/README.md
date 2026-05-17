@@ -27,3 +27,4 @@ ein Leitfaden für Anfänger, Website-Tutorial.
 - Medienabfrage (Media-Query)
 - Einführung in HTML5 & CSS3
 
+## [![Small Screen View](https://github.com/strongMaple/web-journey-projects/blob/main/loruki_de/IMAGE/loruki_deutsch.jpg?raw=true)](https://github.com/strongMaple/web-journey-projects)

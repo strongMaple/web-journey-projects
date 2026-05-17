@@ -8,3 +8,5 @@ Ich habe es schneien lassen 🙃
    **https://x-mas-lights.netlify.app/**
 
 2. Viel Spaß beim Umschalten der Weihnachtslichter!
+
+## [![Small Screen View](https://github.com/strongMaple/web-journey-projects/blob/main/x-mas_snow/bild/Light_index.html.png?raw=true)](https://github.com/strongMaple/web-journey-projects)

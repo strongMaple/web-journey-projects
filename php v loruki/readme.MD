@@ -71,5 +71,8 @@ View the updated [`config.php`](https://github.com/1501henify/Loruki-with-databa
 ## Clone This Repository
 To download these files to your local machine, run the following command:
 
-```bash
-git clone https://github.com/1501henify/Loruki-with-database
+## [![Small Screen View](https://github.com/strongMaple/web-journey-projects/blob/main/loruki_en/IMAGE/loruki_english.jpg?raw=true)](https://github.com/strongMaple/web-journey-projects)
+
+## [![Small Screen View](https://github.com/strongMaple/web-journey-projects/blob/main/php%20v%20loruki/users/image/user.php.png?raw=true)](https://github.com/strongMaple/web-journey-projects)
+
+## [![Small Screen View](https://github.com/strongMaple/web-journey-projects/blob/main/php%20v%20loruki/users/image/create_plan.php.png?raw=true)](https://github.com/strongMaple/web-journey-projects)

@@ -27,3 +27,5 @@ It showcases a Home_page, Features and Docs page with their styled CSS.
 - Responsiveness
 - Media Query
 - Introduction to HTML5 & CSS3
+
+## [![Small Screen View](https://github.com/strongMaple/web-journey-projects/blob/main/loruki_en/IMAGE/loruki_english.jpg?raw=true)](https://github.com/strongMaple/web-journey-projects)

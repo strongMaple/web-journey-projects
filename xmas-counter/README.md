@@ -5,4 +5,4 @@ Diese Website zeigt einen einfachen Countdown bis Weihnachten. Sie wurde mit HTM
 ### Live-Demo
 **https://x-mas-counter.netlify.app/**
 
-## [![Small Screen View](https://github.com/1501henify/Xmas-Counter/blob/main/screenshot.png)](https://github.com/1501henify/Xmas-Counter)
+## [![Small Screen View](https://github.com/strongMaple/web-journey-projects/blob/main/xmas-counter/newScrrenshot.png?raw=true)](https://github.com/strongMaple/web-journey-projects)

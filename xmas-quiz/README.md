@@ -22,3 +22,5 @@ The **Christmas-Themed Quiz Website** something for the season;this holiday-insp
 #### Contributing
 
 Contributions are welcome! Please create a pull request with your changes and ensure they align with the holiday theme.
+
+## [![Small Screen View](https://github.com/strongMaple/web-journey-projects/blob/main/xmas-quiz/festive_question.jpg?raw=true)](https://github.com/strongMaple/web-journey-projects)
