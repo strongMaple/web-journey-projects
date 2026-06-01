@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://maple.vercel.app/sitemap.xml
-Host: https://maple.vercel.app
+Sitemap: https://strong-maple.netlify.app/sitemap.xml
+Host: https://strong-maple.netlify.app

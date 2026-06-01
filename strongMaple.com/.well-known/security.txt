@@ -2,6 +2,6 @@ Contact: mailto:henify.1501@gmail.com
 Contact: https://github.com/strongMaple
 Expires: 2027-02-09T00:00:00.000Z
 Preferred-Languages: en
-Canonical: https://maple.vercel.app/.well-known/security.txt
-Policy: https://maple.vercel.app/security-policy/index.html
-Acknowledgments: https://maple.vercel.app/humans.txt
+Canonical: https://strong-maple.netlify.app/.well-known/security.txt
+Policy: https://strong-maple.netlify.app/security-policy/index.html
+Acknowledgments: https://strong-maple.netlify.app/humans.txt

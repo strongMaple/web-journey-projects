@@ -1,12 +1,12 @@
 /* TEAM */
-Developer: Henry
+Developer: Maple
 Role: Student Developer, Frontend & Python Learner
 Location: Nigeria
 GitHub: https://github.com/strongMaple
 
 /* SITE */
-Site Name: Henry Portfolio
-URL: https://maple.vercel.app
+Site Name: Maple Portfolio
+URL: https://strong-maple.netlify.app
 Tech Stack: HTML, CSS, JavaScript, Python
 Purpose: Document learning journey, projects, and experiments in web development and backend Python.
 
