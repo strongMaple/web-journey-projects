@@ -44,7 +44,7 @@ CREATE TABLE user_plans (
 *(If using XAMPP, click "Go". If using PostgreSQL, SQL Server, or SQLite, adjust the SQL syntax accordingly.)*
 
 ### 3. Update the `config.php` File
-View the updated [`config.php`](https://github.com/1501henify/Loruki-with-database/blob/myBranch/users/php/config.php) file for any database modifications.
+View the updated [`config.php`](https://github.com/strongMaple/web-journey-projects/blob/main/php%20v%20loruki%2Fusers%2Fphp%2Fconfig.php) file for any database modifications.
 
 ---
 

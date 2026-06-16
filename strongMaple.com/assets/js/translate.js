@@ -29,11 +29,11 @@ const translations = {
     cssIntroTitle: "CSS-Intro <span>&#8599;</span>",
     cssDesc: `Ein deutsch inspiriertes Projekt, basierend auf einem YouTube-Tutorial von <a href="https://youtube.com/@traversymedia?si=rlugzAA0gD6-DKwj" rel="noopener noreferrer" target="_blank">Brad Traversy</a>. Es behandelt HTML5-Syntax, VSCode-Setup, das CSS-Boxmodell und mehr.`,
 
-    snowAnimationTitle: "Schneeanimation <span>&#8599;</span>",
-    snowDesc: `Eine einfache Website zur Visualisierung eines <b class="snowButton">Schneeeffekts</b> mit JavaScript. Deutsch inspiriert, mit Fokus auf ein einfaches, benutzerfreundliches UI.`,
+    snowAnimationTitle: "Schneeanimation & Countdown <span>&#8599;</span>",
+    snowDesc: `Eine einfache Website zur Visualisierung von Javascript, wie es verwendet wurde, um einen Effekt auf einer Webseite zu gestalten und einen <b class="snowButton">Schneefall-Effekt;</b> zu erzeugen. Es ist ein Neujahrs-Countdown mit Javascript-Animation. Der Schneefall stand im Fokus und das Projekt ist anfängerfreundlich.`,
 
     observerTitle: "Observer & Zähler <span>&#8599;</span>",
-    observerDesc: `Observer- API mit JavaScript, die ein Zähleffekt beim Scrollen aktiviert.Verwendet in einem <a href="#" rel="noopener noreferrer" target="_blank">meiner</a> <a href="https://phlox.pro" rel="noopener noreferrer" target="_blank">Phlox-</a>inspirierten Projekte.`,
+    observerDesc: `Observer- API mit JavaScript, die ein Zähleffekt beim Scrollen aktiviert.Verwendet in einem <a href="https://phlox-demo-en.netlify.app/" rel="noopener noreferrer" target="_blank">meiner</a> <a href="https://phlox.pro" rel="noopener noreferrer" target="_blank">Phlox-</a>inspirierten Projekte.`,
 
     pythonTitle: "Python <span>&#8599;</span>",
     pythonDesc: `Ich lerne Python zusammen mit Frameworks wie  <b class="tak">Django</b> und <b class="tak">Flask</b> zur Unterstützung der Webentwicklung.`,

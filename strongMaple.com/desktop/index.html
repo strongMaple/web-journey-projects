@@ -1,32 +1,66 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Maple | Student Developer Portfolio</title>
+    <title>Maple | Web Developer & Frontend Engineer</title>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Indexing -->
+    <!-- Search Console -->
+    <meta
+      name="google-site-verification"
+      content="BXhj3vOOekHYN_z2D8Q-rFIAU5Yw5Q5HdKDDnOKfSbc"
+    />
+
     <meta name="robots" content="index, follow" />
 
-    <!-- Description -->
     <meta
       name="description"
-      content="(Maple) — Student Developer Portfolio featuring frontend projects, JavaScript animations, MERN-stack developement."
+      content="Maple is a web developer specializing in frontend development, JavaScript applications, UI design, and MERN stack projects. Clean, responsive, and performance-focused web experiences."
     />
 
-    <!-- Keywords -->
     <meta
       name="keywords"
-      content="Maple, UNN Student Developer, Nsukka Developer, Nigeria Student Developer, Frontend Developer UNN, Python Developer Nigeria, Django Student, Flask Beginner, JavaScript Projects GitHub"
+      content="Maple developer, web developer portfolio, frontend engineer, JavaScript developer, React projects, MERN stack developer, UI design, web development Nigeria, UNN student developer, GitHub projects, responsive web design"
     />
 
-    <meta name="author" content="" />
+    <meta name="author" content="Maple" />
     <meta name="theme-color" content="#0a0a0a" />
 
-    <!-- Canonical -->
     <link rel="canonical" href="https://strong-maple.netlify.app/" />
 
-    <!-- hreflang -->
+    <link rel="me" href="https://x.com/Maple1dk" />
+    <link rel="me" href="https://github.com/strongMaple" />
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Maple Portfolio" />
+    <meta property="og:title" content="Maple | Web Developer & UI Engineer" />
+    <meta
+      property="og:description"
+      content="Portfolio of Maple — student developer building frontend systems, JavaScript apps, and modern web interfaces."
+    />
+    <meta property="og:url" content="https://strong-maple.netlify.app/" />
+    <meta
+      property="og:image"
+      content="https://strong-maple.netlify.app/assets/og-image.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Maple | Web Developer & UI Engineer" />
+    <meta
+      name="twitter:description"
+      content="Frontend developer building fast, modern, responsive web applications."
+    />
+    <meta
+      name="twitter:image"
+      content="https://strong-maple.netlify.app/assets/twt.png"
+    />
+    <meta name="twitter:site" content="@Maple1dk" />
+
     <link
       rel="alternate"
       hreflang="en"
@@ -34,42 +68,13 @@
     />
     <link
       rel="alternate"
-      hreflang="de"
-      href="https://strong-maple.netlify.app/?lang=de"
-    />
-    <link
-      rel="alternate"
       hreflang="x-default"
       href="https://strong-maple.netlify.app/"
     />
 
-    <!-- Open Graph -->
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Maple" />
-    <meta property="og:title" content="Maple | Student Developer Portfolio" />
-    <meta
-      property="og:description"
-      content="Portfolio of  — Student developer building frontend, JavaScript and Python projects."
-    />
-    <meta property="og:url" content="https://strong-maple.netlify.app/" />
-    <meta property="og:image" content="" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-
-    <!-- Redirect for Mobile -->
-    <script>
-      if (window.innerWidth <= 768) {
-        window.location.replace("/");
-      }
-    </script>
-
-    <!-- Styles -->
     <link rel="stylesheet" href="/assets/css/desktop.css" />
     <link rel="icon" href="/assets/favicon.ico" />
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -77,11 +82,16 @@
       rel="stylesheet"
     />
 
-    <!-- Font Awesome -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"
       defer
     ></script>
+
+    <script>
+      if (window.innerWidth <= 768) {
+        window.location.replace("/");
+      }
+    </script>
   </head>
   <body>
     <aside class="Me home">
@@ -119,10 +129,14 @@
       <div class="info-icons">
         <ul>
           <!-- GitHub -->
-          <li class="github-trigger">
-            <button class="github-btn" aria-label="GitHub profiles">
+          <li>
+            <a
+              href="https://github.com/strongMaple"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="fab fa-github"></i>
-            </button>
+            </a>
           </li>
 
           <!-- Email -->
@@ -138,53 +152,26 @@
 
           <!-- WhatsApp -->
           <li>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://wa.me/2348058150233"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="fab fa-whatsapp"></i>
             </a>
           </li>
 
           <!-- X (Twitter) -->
           <li>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://x.com/Maple1dk"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="fab fa-x-twitter"></i>
             </a>
           </li>
-
-          <!-- LinkedIn -->
-          <li>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </li>
         </ul>
-      </div>
-
-      <div class="github-modal-overlay" id="githubModal">
-        <div class="github-modal">
-          <h3>GitHub Accounts</h3>
-
-          <a
-            href="https://github.com/strongMaple"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="github-link"
-          >
-            <i class="fab fa-github"></i>
-            <span>Maple</span>
-          </a>
-
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="github-link"
-          >
-            <i class="fab fa-github"></i>
-            <span>_null_</span>
-          </a>
-
-          <button class="close-modal">Close</button>
-        </div>
       </div>
     </aside>
 
@@ -239,7 +226,11 @@
 
       <section id="projectsPage" class="projects">
         <!-- CSS-Intro -->
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/strongMaple/web-journey-projects/tree/main/acme_en"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div class="pro-card">
             <div class="img">
               <img src="../assets/img/acme_Deutsch.jpg" alt="Acme Website" />
@@ -247,7 +238,7 @@
             <div class="content">
               <h3>
                 <a
-                  href="#"
+                  href="https://github.com/strongMaple/web-journey-projects/tree/main/acme_en"
                   target="_blank"
                   rel="noopener noreferrer"
                   id="cssIntroTitle"
@@ -277,7 +268,11 @@
         </a>
 
         <!-- Snow Animation -- Scneeanimation -->
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/strongMaple/web-journey-projects/tree/main/new_year_counter"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div class="pro-card">
             <div class="img">
               <img
@@ -288,20 +283,20 @@
             <div class="content">
               <h3>
                 <a
-                  href="#"
+                  href="https://github.com/strongMaple/web-journey-projects/tree/main/new_year_counter"
                   target="_blank"
                   rel="noopener noreferrer"
                   id="snowAnimationTitle"
                   class="snowAnimationTitle"
-                  >Snow Animation <span>&#8599;</span></a
+                  >Snow Animation & Countdown <span>&#8599;</span></a
                 >
               </h3>
               <p id="snowDesc" class="snowDesc">
                 A simple website for visualizing Javascript as it was used to
                 stylize an effect on a webpage to give a
-                <b class="snowButton">snowing effect;</b> also Deutsch(German)
-                inspired, it's a simple light button Javascript ran animation,
-                the snowing was the focus, it's beginner friendly.
+                <b class="snowButton">snowing effect;</b>it's a new year counter
+                Javascript ran animation, the snowing was the focus, it's
+                beginner friendly.
               </p>
 
               <ul class="stack">
@@ -314,7 +309,11 @@
         </a>
 
         <!-- Observer & Counter -->
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/strongMaple/web-journey-projects/tree/main/henify-Observer-API"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div class="pro-card">
             <div class="img">
               <img
@@ -325,7 +324,7 @@
             <div class="content">
               <h3>
                 <a
-                  href="#"
+                  href="https://github.com/strongMaple/web-journey-projects/tree/main/henify-Observer-API"
                   target="_blank"
                   rel="noopener noreferrer"
                   id="observerTitle"
@@ -337,7 +336,12 @@
                 Observer-API with javascript, this was used in creating an
                 effect, that when in view the counting starts. This feature is
                 seen
-                <a href="#" target="_blank" rel="noopener noreferrer">here</a>
+                <a
+                  href=" https://phlox-demo-en.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >here</a
+                >
                 in my
                 <a
                   href="https://phlox.pro"
@@ -358,7 +362,11 @@
         </a>
 
         <!-- Python -->
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/strongMaple/learning"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div class="pro-card">
             <div class="img">
               <img src="../assets/img/py.jpg" alt="Learning Python" />
@@ -367,7 +375,7 @@
             <div class="content">
               <h3>
                 <a
-                  href="#"
+                  href="https://github.com/strongMaple/learning"
                   target="_blank"
                   rel="noopener noreferrer"
                   id="pythonTitle"
@@ -403,7 +411,10 @@
 
       <section id="contactPage" class="contact">
         <p>
-          <a href="#" target="_blank" rel="noopener noreferrer"
+          <a
+            href="https://wa.me/2348058150233"
+            target="_blank"
+            rel="noopener noreferrer"
             ><i class="fab fa-whatsapp"></i
           ></a>
           <span id="contactWa" class="contactWa">

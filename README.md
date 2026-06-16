@@ -1,2 +1,2 @@
 # web-journey-projects
-folder of all things cringe beginner web development. 05/17
+folder, brain-box-dump, of all things web development. 06/16

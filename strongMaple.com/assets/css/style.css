@@ -6,15 +6,15 @@
 }
 
 :root {
---background-navy-clr: #2b140a;
---background-lgt_navy-clr: #4a2412;
---background-lgt-st_navy-clr: #6b3418;
---clr-slate: #b07a52;
---light-clr-slate: #d19a6a;
---lightest-clr-slate: #f2c18d;
---white-clr: #fff2e6;
---accent-clr: #ff9b42;
---text-clr: #ffd9b3;
+  --background-navy-clr: #2b140a;
+  --background-lgt_navy-clr: #4a2412;
+  --background-lgt-st_navy-clr: #6b3418;
+  --clr-slate: #b07a52;
+  --light-clr-slate: #d19a6a;
+  --lightest-clr-slate: #f2c18d;
+  --white-clr: #fff2e6;
+  --accent-clr: #ff9b42;
+  --text-clr: #ffd9b3;
 }
 
 html,
@@ -175,76 +175,8 @@ nav ul li a:hover {
   transition: color 0.3s ease;
 }
 
-.info-icons ul li a:hover,
-.github-btn:hover {
+.info-icons ul li a:hover {
   color: var(--clr-slate);
-}
-
-.github-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 24px;
-  color: var(--text-clr);
-}
-
-.github-modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(10, 25, 47, 0.85);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-  padding: 16px;
-  overflow-y: auto;
-}
-
-.github-modal {
-  background: var(--background-lgt_navy-clr);
-  padding: 24px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 360px;
-  text-align: center;
-  color: var(--text-clr);
-  box-sizing: border-box;
-  word-wrap: break-word;
-}
-
-.github-modal h3 {
-  margin-bottom: 16px;
-  color: var(--white-clr);
-  font-size: 1.2rem;
-  word-wrap: break-word;
-}
-
-.github-link {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 6px;
-  text-decoration: none;
-  color: var(--lightest-clr-slate);
-  background: var(--background-lgt-st_navy-clr);
-  word-break: break-word;
-}
-
-.github-link:hover {
-  color: var(--lightest-clr-slate);
-}
-
-.close-modal {
-  margin-top: 14px;
-  background: transparent;
-  border: 1px solid var(--accent-clr);
-  color: var(--accent-clr);
-  padding: 6px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  min-width: 80px;
 }
 
 /* About */
@@ -388,7 +320,7 @@ nav ul li a:hover {
   font-weight: 600;
   margin-right: 10px;
 
-  background: #64ffda1a;
+  background: #6b34182e;
   padding: 4px 16px;
   border-radius: 2em;
   cursor: text;
