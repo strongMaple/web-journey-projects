@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://strong-maple.netlify.app/sitemap.xml
-Host: https://strong-maple.netlify.app
